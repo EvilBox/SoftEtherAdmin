@@ -22,7 +22,8 @@ module.controller('dashboardController', function ($scope, $http) {
     self.infoData = response.data['ServerInfoGet'];
 
     // calculate the uptime
-    var startDateString = serverStatusData['Server Started at'].replace(/\(\w*\)./g, '');
+    // var startDateString = serverStatusData['Server Started at'].replace(/\(\w*\)./g, '');
+    var startDateString = process.uptime() * 1000;
     self.uptime = getUptime(startDateString);
 
     // calculate the unicast data transferred
