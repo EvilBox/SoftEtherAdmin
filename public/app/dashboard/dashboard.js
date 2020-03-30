@@ -23,8 +23,8 @@ module.controller('dashboardController', function ($scope, $http) {
 
     // calculate the uptime
     // var startDateString = serverStatusData['Server Started at'].replace(/\(\w*\)./g, '');
-    var startDateString = process.uptime() * 1000;
-    self.uptime = getUptime(startDateString);
+    // var startDateString = process.uptime() * 1000;
+    // self.uptime = getUptime(startDateString);
 
     // calculate the unicast data transferred
     var unicastOutData = serverStatusData['Outgoing Unicast Total Size'];
